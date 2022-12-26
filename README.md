@@ -68,3 +68,45 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Структура
+
+1. Вхідний масив для опрацювання (arrayOrder)
+   [{
+   id: ІПН,
+   name: ПІБ,
+   day30t: кількість днів,
+   day100t: кількість днів,
+   period30:[1, 2, 3 ...],
+   period100:[ 4, 5, 6 ... 30]
+   }]
+
+2. Масиви фільтрації
+   2.1 Масив людей, які отримали гз (arrayGZ)
+   [{
+   id: ІПН,
+   name: ПІБ,
+   dayGZ: кількість днів,
+   periodGZ:[ 4, 5, 6 ... 30]
+   }]
+
+   2.2 Масив позбавлень (arrayLost)
+   [{
+   id: ІПН,
+   name: ПІБ,
+   }]
+
+3. Результат масив на виплату (arrayRewardDay)
+   [{
+   id: ІПН,
+   day30t: кількість днів,
+   day100t: кількість днів,
+   }]
+
+Завдання
+
+1. Фронт таблиця.
+2. Імпорт вхідного масиву з наказу (спочатку руцями).
+3. Імпор масивів фільтрації (спочатку руцями).
+4. Функції фільтра та перебору масивів.
+5. Вивід результату в таблиці ексель.
