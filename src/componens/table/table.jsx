@@ -3,7 +3,9 @@ import classes from "./table.module.css"
 
 
 import TableItem from "./table.item";
-import arrayOrder from "../arrays/arrayOrder";
+// import arrayOrder from "../arrays/arrayOrder";
+import creatFinishArray from "../Filter";
+
 
 
 
@@ -24,7 +26,7 @@ const Table = function () {
                     </tr>
                 </thead>
                 <tbody>
-                    {arrayOrder.map(el => <TableItem array={{ id: el.id, name:el.name, day30t: el.day30t, day100t: el.day100t}} key={el.id} />)}
+                    {creatFinishArray().map(el => <TableItem array={{ id: el.id, name:el.name, day30t: el.day30t, day100t: el.day100t}} key={el.id} />)}
                 </tbody>
             </table>
         </div>
