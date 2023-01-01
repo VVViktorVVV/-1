@@ -26,7 +26,7 @@ const Table = function () {
                     </tr>
                 </thead>
                 <tbody>
-                    {creatFinishArray().map(el => <TableItem array={{ id: el.id, name:el.name, day30t: el.day30t, day100t: el.day100t}} key={el.id} />)}
+                    {creatFinishArray().map((el, index) => <TableItem number = {index + 1} array={{ id: el.id, name:el.name, days30t: el.days30t, days100t: el.days100t}} key={el.id + index + 1} />)}
                 </tbody>
             </table>
         </div>

@@ -7,11 +7,11 @@ const TableItem = (props) => {
     
     return (
         <tr className={classes}>
-            <td>1</td>
+            <td>{props.number}</td>
             <td>{props.array.id}</td>
             <td>{props.array.name}</td>
-            <td>{props.array.day30t}</td>
-            <td>{props.array.day100t}</td>
+            <td>{props.array.days30t}</td>
+            <td>{props.array.days100t}</td>
         </tr>
     );
 }
