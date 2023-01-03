@@ -1,12 +1,13 @@
 
-import arrayOrder from "./arrays/arrayOrder";
+import arrayOrder from "../arrays/arrayOrder";
 // import arrayGZ from "./arrays/arrayGZ";
-import arrayLost from "./arrays/arrayLost";
+import arrayLost from "../arrays/arrayLost";
 
 const finisharray = [];
 
 const creatFinishArray = () => {
-    
+
+    finisharray.length = 0;    
     console.log(arrayLost);
 
     arrayOrder.forEach((el) => {
