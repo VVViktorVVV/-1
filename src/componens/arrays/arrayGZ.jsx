@@ -2,7 +2,12 @@
 
 const arrayGZ = [
     {
-        id: 2379521065, name: "	Ковтун Володимир Іванович	", startPeriod1: "	01.11.2022	", finishPeriod1: "	30.11.2022	", startPeriod2: "	00.00.1900 ", finishPeriod2: "	00.00.1900 ",
+        id: 2379521065,
+        name: "	Ковтун Володимир Іванович	",
+        startPeriod1: "	01.11.2022	",
+        finishPeriod1: "	30.11.2022	",
+        startPeriod2: "	00.00.1900 ",
+        finishPeriod2: "	00.00.1900 ",
         periodNumbers: []
     },
     {

@@ -1,8 +1,7 @@
 
 import arrayOrder from "../arrays/arrayOrder";
-// import arrayGZ from "./arrays/arrayGZ";
 import arrayLost from "../arrays/arrayLost";
-// import creatArrayWithPeriodDays from "./ArrayWithPeriodDays";
+
 
 const finisharray = [];
 
@@ -16,7 +15,12 @@ const creatFinishArray = () => {
     });
 
 
+
+
+   
+
     console.log(finisharray);
+
     return finisharray;
 }
 

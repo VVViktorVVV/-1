@@ -1,15 +1,9 @@
 import React from "react";
 import classes from "./table.module.css"
-
-
 import TableItem from "./table.item";
-// import arrayOrder from "../arrays/arrayOrder";
-import creatFinishArray from "../functions/Filter";
 
 
-
-
-const Table = function () {
+const Table = function ({arrayUsers}) {
    
 
     return (
@@ -26,7 +20,7 @@ const Table = function () {
                     </tr>
                 </thead>
                 <tbody>
-                    {creatFinishArray().map((el, index) => <TableItem number={index + 1} array={{ id: el.id, name: el.name, days30t: el.days30t, days100t: el.days100t }} key={el.id + index + 1} />)}
+                    {arrayUsers.map((el, index) => <TableItem number={index + 1} array={{ id: el.id, name: el.name, days30t: el.days30t, days100t: el.days100t }} key={el.id + index + 1} />)}
                     
                 </tbody>
             </table>

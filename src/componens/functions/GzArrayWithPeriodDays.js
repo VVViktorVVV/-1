@@ -22,6 +22,8 @@ const creatGzArrayWithPeriodDays = () => {
 
     console.log(arrayGZ);
 
+    
+
 }
 
 export default creatGzArrayWithPeriodDays;

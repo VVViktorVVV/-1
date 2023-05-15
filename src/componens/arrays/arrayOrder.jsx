@@ -2,8 +2,16 @@
 
 const arrayOrder = [
     {
-        id: 2379521065, name: "	Ковтун Володимир Іванович	", startPeriod30t: "	01.11.2022	", finishPeriod30t: "	05.11.2022	", periodNumbers30t: [], days30t: 5,
-        startPeriod100t: "	01.11.2022	", finishPeriod100t: "	30.11.2022	", periodNumbers100t: [], days100t: 0
+        id: 2379521065,
+        name: "	Ковтун Володимир Іванович	",
+        startPeriod30t: "	01.11.2022	",
+        finishPeriod30t: "	05.11.2022	",
+        periodNumbers30t: [],
+        days30t: 5,
+        startPeriod100t: "	01.11.2022	",
+        finishPeriod100t: "	30.11.2022	",
+        periodNumbers100t: [],
+        days100t: 0
     },
     {
         id: 2705017324, name: "	Тарасенко Дмитро Валентинович	", startPeriod30t: "	01.11.2022	", finishPeriod30t: "	02.11.2022	", periodNumbers30t: [], days30t: 2,

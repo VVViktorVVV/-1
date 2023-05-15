@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Table from "./componens/table/table";
 // import creatFinishArray from "./componens/functions/Filter";
 import creatArrayWithPeriodDays from "./componens/functions/ArrayWithPeriodDays";
-import arrayGZ from "./componens/arrays/arrayGZ";
+
 import creatGzArrayWithPeriodDays from "./componens/functions/GzArrayWithPeriodDays";
-import fetchUsers from "./componens/functions/FetchUsers";
+import arrayOrder from "./componens/arrays/arrayOrder";
+import creatFinishArray from "./componens/functions/Filter";
+
 
 
 
@@ -12,15 +14,34 @@ import fetchUsers from "./componens/functions/FetchUsers";
 
 
 function App() {
+  const [users, setUsers] = useState(
+    arrayOrder
+  )
 
-  console.log(arrayGZ);
+  const creatFilterArray = () => {
+  setUsers(creatFinishArray())
+}
+
+  const arrayServer = async () => {
+     try {
+      const response = await fetch("http://localhost:3003/arrayOrder");
+       const users = await response.json();
+       setUsers(users)
+      // console.log(users);
+  } catch (error) {
+       console.log(error.message);
+  } 
+ 
+}
+  
   
   return (
     <div className="App">
+      <button onClick={creatFilterArray}>Фільтр по позбавленням</button>
       <button onClick={creatArrayWithPeriodDays}>В консоль масив з розбивкою по датам винагорода</button>
       <button onClick={creatGzArrayWithPeriodDays}>В консоль масив з розбивкою по датам ГЗ</button>
-      <button onClick={fetchUsers}>Масив з локального серверу на екран</button>
-      <Table/>
+      <button onClick={arrayServer}>Масив з локального серверу на екран</button>
+      <Table arrayUsers={users} />
     </div>
   );
 }
