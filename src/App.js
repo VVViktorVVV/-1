@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+
+
 import Table from "./componens/table/table";
+import Button from "./componens/button/button";
 
 import creatArrayWithPeriodDays from "./componens/functions/ArrayWithPeriodDays";
 
@@ -7,7 +10,7 @@ import creatGzArrayWithPeriodDays from "./componens/functions/GzArrayWithPeriodD
 import arrayOrder from "./componens/arrays/arrayOrder";
 import creatFinishArray from "./componens/functions/Filter";
 // import write from "./componens/functions/SaveToDB";
-import fetchPostUsers from "./componens/functions/FetchPost";
+
 // import creatFinishArray from "./componens/functions/Filter";
 
 
@@ -35,17 +38,34 @@ function App() {
        console.log(error.message);
   } 
  
-}
+  }
+  
+  const inputFile = useRef(null)
+
+  const onButtonClick = () => {
+  // `current` points to the mounted file input element
+  inputFile.current.click();
+  };
+  
+  const handleChange = () => {
+    alert('The end');
+  }
   
   
   return (
     <div className="App">
-      <button onClick={creatFilterArray}>Фільтр по позбавленням</button>
-      <button onClick={creatArrayWithPeriodDays}>В консоль масив з розбивкою по датам винагорода</button>
-      <button onClick={creatGzArrayWithPeriodDays}>В консоль масив з розбивкою по датам ГЗ</button>
-      <button onClick={arrayServer}>Масив з локального серверу на екран</button>
+      <Button el={'Open file'} f={onButtonClick} />
+      <Button el={'Фільтр по позбавленням'} f={creatFilterArray} />
+      <Button el={'В консоль масив з розбивкою по датам винагорода'} f={creatArrayWithPeriodDays} />
+      <Button el={'В консоль масив з розбивкою по датам ГЗ'} f={creatGzArrayWithPeriodDays} />
+      <Button el={'Масив з локального серверу на екран'} f={arrayServer}/>
+      
+           
+     
       {/* <button onClick={write}>Запис інфи на сервер</button> */}
       <Table arrayUsers={users} />
+      
+      <input type='file' id='file' onChange={handleChange} ref={inputFile} style={{display: 'none'}}/>
     </div>
   );
 }
